@@ -1,0 +1,34 @@
+{
+  "name": "eat-da-burger",
+  "version": "0.0.1",
+  "description": "burger",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "shaan obney",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.5",
+    "mysql": "^2.10.2"
+  },
+
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaanobney/Burger.git"
+  },
+  "keywords": [
+    "burger"
+  ],
+  "bugs": {
+    "url": "https://github.com/shaanobney/Burger/issues"
+  },
+  "engines": {
+    "node": "4.1.1"
+  }
+}

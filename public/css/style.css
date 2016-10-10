@@ -1,0 +1,219 @@
+* {
+  border-radius: 0 !important;
+}
+
+@font-face {
+    font-family: logo;
+    src: url("../fonts/logo.ttf");
+}
+
+@font-face {
+    font-family: blox;
+    src: url("../fonts/blox.ttf");
+}
+
+@font-face {
+    font-family: alien;
+    src: url("../fonts/alien.ttf");
+}
+
+@font-face {
+    font-family: lcd;
+    src: url("../fonts/lcd.otf");
+}
+
+@font-face {
+    font-family: robo;
+    src: url("../fonts/robo.ttf");
+}
+
+@font-face {
+    font-family: spacer;
+    src: url("../fonts/space.ttf");
+}
+
+@font-face {
+    font-family: vcr;
+    src: url("../fonts/vcr.ttf");
+}
+
+html {
+   width:100%;
+   height:100%;
+}
+
+input { 
+  box-shadow: 0 0 3px #CC0000; 
+  margin: 4px;
+}
+
+body {
+	color: #f1a94e;
+	background: url("../images/back.gif") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	font-family: spacer;
+}
+
+button {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -khtml-border-radius: 4px;
+  background: #eb53a7;
+  color: black;
+  border: solid 1px black;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: spacer;
+  font-size: 1em;
+  padding: 0px 0px;
+  width: 85px;
+  outline: none;
+  margin-left: 15px;
+  margin-right: 10px;
+  max-width: 100%;
+}
+
+button:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: #feeb51;
+  border: solid 1px black;
+  color: black;
+}
+
+h1 {
+	font-size: 5vw;
+  margin-top: 4%;
+
+}
+
+li {
+  font-family: vcr;
+  display: block;
+  font-size: 1em;
+  min-width: 200px;
+/*  white-space: nowrap*/
+}
+
+ul {
+/*  overflow: auto;*/
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.panel {
+  background-color: transparent;
+  border: none;
+}
+
+.panel-body {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#addBur {
+  color: white;
+  background-color: #b1201a;
+  width: 100px;
+}
+
+#headingTwo {
+  background-color: transparent;
+}
+
+#one {
+  float: left;
+  height: 23px;
+  width: auto;
+  display: inline;
+}
+
+#two {
+  float: right;
+  height: 23px;
+  width: auto;
+  display: inline;
+}
+
+#rob {
+	font-family: robo;
+	color: #c7b175;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#robTwo {
+  font-family: blox;
+  color: #eb53a7;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px #feeb51;
+}
+
+#title {
+	font-family: logo;
+	font-size: 72px;
+	text-align: center;
+	color: #feeb51;
+  text-shadow: 1px 1px black;
+}
+
+.container {
+	background-color: transparent;
+  text-shadow: 1px 1px black;
+}
+
+#heading {
+	text-align: center;
+	background-color: #2e7bb0;
+	color: white;
+	margin: 0px;
+	vertical-align: center;
+  text-shadow: 1px 1px black;
+  box-shadow: 4px 4px #feeb51;
+}
+
+
+#addBurger {
+	text-align: right;
+	background:url("../images/burgie.gif") no-repeat;
+	background-size: contain;
+	margin: 0px;
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+  button {
+    width: 75%;
+  }
+}
+  
+@media (max-width: 768px) {
+  button {
+    padding:0px 0px;
+    font-size:80%;
+    line-height: 1;
+    border-radius:3px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  button {
+    padding:0px 0px;
+    font-size:90%;
+    line-height: 1.2;
+  }
+}
+
+

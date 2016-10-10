@@ -1,0 +1,75 @@
+<div class="container">
+    <div id="title">
+        <h1>Eat The Spaceburger</h1>
+    </div>
+    <div id="contained">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div id="heading" class="panel panel-heading">
+                <h2 class="rob">Burgers to Eat</h2>
+            </div>
+            <div class="panel panel-body">
+                <ul>
+                    {{#each burgers}} {{#unless this.devoured}}
+                    <li>
+                        <div id="one">
+                            {{this.burger_name}}
+                        </div>
+                        <div id="two">
+                            <form clsss="righty" action="index/update/{{this.id}}?_method=PUT" method="POST">
+                                <input type="hidden" name="devoured" value="1">
+                                <button type="submit">EAT</button>
+                            </form>
+                        </div>
+                    </li>
+                    {{/unless}} {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div id="sector" class="panel panel-default">
+            <div id="heading" class="panel panel-heading">
+                <h2 class="rob">Add a Space Burger</h2>
+            </div>
+            <div id="addBurger" class="panel panel-body">
+                <form class="create-update-form" action="index/create" method="POST">
+                    <div class="form-group">
+                        <input type="text" maxlength="25" style="text-transform:uppercase" placeholder="NAME YR BURGER" id="burger" name="burger_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="devoured"></label>
+                        <input type="hidden" name="devoured" value="0" checked>
+                    </div>
+                    <button id="addBur" type="submit">Add Burger</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div id="heading" class="panel panel-heading">
+                <h2 class="rob">Burgers Eaten</h2>
+            </div>
+            <div class="panel panel-body">
+                <ul>
+                    {{#each burgers}} {{#if this.devoured}}
+                    <li>
+                        <div id="one">
+                            {{this.burger_name}}
+                        </div>
+                        <div id="two">
+                            <form action="index/update/{{this.id}}?_method=PUT" method="POST">
+                                <input type="hidden" name="devoured" value="0">
+                                <button type="submit">Teleport</button>
+                            </form>
+                        </div>
+                    </li>
+                    {{/if}} {{/each}}
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
