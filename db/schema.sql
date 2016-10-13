@@ -1,7 +1,8 @@
 CREATE TABLE burgers (
 	id INT AUTO_INCREMENT NOT NULL,
-	burger_name VARCHAR(255) NOT NULL,
+	burger_name VARCHAR(255) NOT NULL DEFAULT 'Unknown',
 	devoured BOOLEAN DEFAULT false,
-  	createdAt TIMESTAMP NOT NULL,
+  createdAt TIMESTAMP NOT NULL,
+  updatedAt DATETIME,
 	PRIMARY KEY(id)
 );

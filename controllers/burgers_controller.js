@@ -8,8 +8,6 @@ router.get('/', function(req, res) {
     res.redirect('/index');
 });
 
-
-
 router.get('/index', function(req, res) {
     models.burgers.findAll()
         .then(function(data) {
@@ -21,7 +19,7 @@ router.get('/index', function(req, res) {
 
 router.post('/index/create', function(req, res) {
     models.burgers.create({
-            burger_name: req.body.name,
+            burger_name: req.body.burger_name,
 
             devoured: req.body.devoured
         })
@@ -29,25 +27,6 @@ router.post('/index/create', function(req, res) {
             res.redirect('/index');
         });
 });
-
-// router.get('/index', function(req,res) {
-// 	burger.selectAll(function(data){
-// 		console.log();
-// 		res.render('index', {burgers: data});
-// 	});
-
-// });
-
-
-
-// router.post('/index/create', function(req,res) {
-// 	burger.insertOne(['burger_name', 'devoured'], [req.body.name, 0], function(data){
-// 		res.redirect('/index');
-// 	});
-
-// });
-
-
 
 router.put('/index/update/:id', function(req, res) {
     var newId = req.params.id;
@@ -62,16 +41,5 @@ router.put('/index/update/:id', function(req, res) {
     });
 
 });
-
-// router.delete('/index/delete/:id', function(req, res) {
-//     var newId = req.params.id;
-//     models.burgers.destroy({
-//         where: {
-//             id: newId
-//         }
-//     }).then(function() {
-//         res.redirect('/index');
-//     });
-// });
 
 module.exports = router;
